@@ -1,14 +1,16 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.userSchema({
+mongoose.connect("mongodb+srv://pradhumngautam:ocbszU1bBSMIc8Aj@cluster0.mojxgk8.mongodb.net/paytm");
+
+const userSchema = new mongoose.Schema({
     username: String,
     firstName: String,
     lastName: String,
     passward: String
 })
 
-const user = mongoose.model('user', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = {
-    user
+    User
 };
