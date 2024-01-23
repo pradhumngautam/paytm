@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config.js");
 const { User } = require("../db.js");
-const { authMiddleware } = require("../middleware");
+const { authMiddleware } = require("../middleware")
 const {Account} = require("../db.js")
 
 const signupBody = zod.object({
