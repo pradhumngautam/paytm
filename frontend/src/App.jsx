@@ -1,13 +1,9 @@
-import { reactrouterdom } from react;
-  
+
 function App() {
 
   return (
     <div>
-      <routes>
-        <route></route>
-      </routes>
-      
+        Hello world
     </div>
   )
 }
