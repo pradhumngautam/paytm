@@ -6,7 +6,8 @@ function App() {
     <div>
       <routes>
         <route></route>
-        </routes>
+      </routes>
+      
     </div>
   )
 }
