@@ -1,6 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 import axios from "axios";
 import { useState } from 'react';
+import { BottomWarning } from "../components/BottomWarning"
 
 export const SendMoney = () => {
     const [searchParams] = useSearchParams();
@@ -52,7 +53,8 @@ export const SendMoney = () => {
                         })
                     }} className="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-green-500 text-white">
                         Initiate Transfer
-                    </button>
+                        </button>
+                        <BottomWarning label={"go to"} buttonText={"dashboard"} to={"/dashboard"} />
                 </div>
                 </div>
         </div>
