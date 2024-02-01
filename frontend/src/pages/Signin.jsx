@@ -22,14 +22,14 @@ export const Signin = () => {
             onChange={(e) => {
               setUsername(e.target.value);
             }}
-            placeholder="harkirat@gmail.com"
+            placeholder="pradhumn@gmail.com"
             label={"Email"}
           />
           <InputBox
             onChange={(e) => {
               setPassword(e.target.value);
             }}
-            placeholder="123456"
+            placeholder="123456" type={"password"}
             label={"Password"}
           />
           <div className="pt-4">
