@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.use("/api/v1", rootRouter);
 
+console.log("backend running");
 app.listen(3000);
 
 
