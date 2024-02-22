@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const zod = require("zod");
-const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config.js");
 const { User } = require("../db.js");
