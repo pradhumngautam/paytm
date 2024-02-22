@@ -5,8 +5,8 @@ const cors = require("cors");
 const { connectDB } = require("./db");
 const app = express();
 
-connectDB();
 app.use(cors());
+connectDB();
 app.use(express.json());
 app.use("/api/v1", rootRouter);
 

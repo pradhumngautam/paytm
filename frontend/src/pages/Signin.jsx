@@ -3,9 +3,9 @@ import { Button } from "../components/Button";
 import { Heading } from "../components/Heading";
 import { InputBox } from "../components/InputBox";
 import { SubHeading } from "../components/SubHeading";
-import { useState } from "react"
+import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 export const Signin = () => {
   const [username, setUsername] = useState("");
@@ -20,7 +20,7 @@ export const Signin = () => {
           <SubHeading label={"Enter your credentials to access your account"} />
           <InputBox
             onChange={(e) => {
-              setUsername(e.target.value)
+              setUsername(e.target.value);
             }}
             placeholder="user@gmail.com"
             label={"Email"}
@@ -29,18 +29,25 @@ export const Signin = () => {
             onChange={(e) => {
               setPassword(e.target.value);
             }}
-            placeholder="123456" type={"password"}
+            placeholder="123456"
+            type={"password"}
             label={"Password"}
           />
           <div className="pt-4">
-            <Button onClick={async () => {
-            const response = await axios.post("http://localhost:3000/api/v1/user/signin", {
-              username,
-              password
-            });
-            localStorage.setItem("token", response.data.token)
-            navigate("/dashboard")
-          }}label={"Sign in"} />
+            <Button
+              onClick={async () => {
+                const response = await axios.post(
+                  "https://paytm-phd6.onrender.com//api/v1/user/signin",
+                  {
+                    username,
+                    password,
+                  }
+                );
+                localStorage.setItem("token", response.data.token);
+                navigate("/dashboard");
+              }}
+              label={"Sign in"}
+            />
           </div>
           <BottomWarning
             label={"Don't have an account?"}
