@@ -53,7 +53,7 @@ export const Signup = () => {
             <Button
               onClick={async () => {
                 const response = await axios.post(
-                  "https://paytm-phd6.onrender.com//api/v1/user/signup",
+                  "https://paytm-phd6.onrender.com/api/v1/user/signup",
                   {
                     username,
                     firstName,
