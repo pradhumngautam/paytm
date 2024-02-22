@@ -54,7 +54,7 @@ export const SendMoney = () => {
                     "https://paytm-phd6.onrender.com/api/v1/account/transfer",
                     {
                       to: id,
-                      amount,
+                      amount: amount,
                     },
                     {
                       headers: {
