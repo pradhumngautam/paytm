@@ -9,7 +9,7 @@ export const Dashboard = () => {
   console.log(balance);
   useEffect(() => {
     axios
-      .get("https://paytm-phd6.onrender.com/api/v1/account/balance", {
+      .get("http://localhost:3000/api/v1/account/balance", {
         headers: { Authorization: "Bearer " + localStorage.getItem("token") },
       })
       .then((response) => setBalance(response.data.balance));
